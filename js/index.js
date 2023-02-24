@@ -3,25 +3,25 @@
 // USAMOS parseInt
 // CAMBIA DE UN STRING A UN DATO NUMERICO
 
-let edad = parseInt(prompt("ingresa tu edad"))
-if (edad === 18) {
-    alert("welcome to my world")
-} else {
-    alert("access denied")
-}
+// let edad = parseInt(prompt("ingresa tu edad"))
+// if (edad === 18) {
+//     alert("welcome to my world")
+// } else {
+//     alert("access denied")
+// }
 
 //DECLARACION DE UN objeto literal
-const persona = {
-    nombre: "Camilo",
-    apellido: "Sanchez",
-    edad: 35,
-    is_activo: true,
-    saludar: function() {
-        console.log("Holas a todos")
-    }
-}
+// const persona = {
+//     nombre: "Camilo",
+//     apellido: "Sanchez",
+//     edad: 35,
+//     is_activo: true,
+//     saludar: function() {
+//         console.log("Holas a todos")
+//     }
+// }
 //CONSULTAR DATOS DE UN OBJETO
-console.log(persona.apellido);
+// console.log(persona.apellido);
 
 //ARRAY
 //INDICE O POSICION 0         1.      2
@@ -29,7 +29,7 @@ const frutas = ["Manzana", "Pera", "Mango"]
 //LARGO=LENGTH      1         2.      3
 
 //CONSULTAR UN VALOR DE UN array
-console.log(frutas);
+// console.log(frutas);
 deportes.push("baloncesto") //INGRESAR NUEVO DATO AL FINAL DE LA ARRAY
 deportes.pop() //ELIMINAR UN DATO AL FINAL DE LA ARRAY
 
