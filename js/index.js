@@ -5,23 +5,23 @@
 
 // let edad = parseInt(prompt("ingresa tu edad"))
 // if (edad === 18) {
-//     alert("welcome to my world")
+alert("welcome to my world")
 // } else {
 //     alert("access denied")
 // }
 
 //DECLARACION DE UN objeto literal
-// const persona = {
-//     nombre: "Camilo",
-//     apellido: "Sanchez",
-//     edad: 35,
-//     is_activo: true,
-//     saludar: function() {
-//         console.log("Holas a todos")
-//     }
-// }
+const persona = {
+    nombre: "Camilo",
+    apellido: "Sanchez",
+    edad: 35,
+    is_activo: true,
+    saludar: function() {
+        console.log("Holas a todos")
+    }
+}
 //CONSULTAR DATOS DE UN OBJETO
-// console.log(persona.apellido);
+console.log(persona.apellido);
 
 //ARRAY
 //INDICE O POSICION 0         1.      2
@@ -43,16 +43,16 @@ saludar() //LLAMANDO A LA FUNCION
 
 
 
-function busquedaFrutas () {
-let busqueda = prompt("Ingrese su busqueda")
+function busquedaFrutas() {
+    let busqueda = prompt("Ingrese su busqueda")
 
 
-let pos = frutas.indexOf("busqueda");
-if (pos >= 0){
-    alert("si existe")
-} else { 
-    alert("No se encontraron")
-}
+    let pos = frutas.indexOf("busqueda");
+    if (pos >= 0) {
+        alert("si existe")
+    } else {
+        alert("No se encontraron")
+    }
 
 }
 //ESTRUCTURAS DE CONTROL: for loops
@@ -66,4 +66,3 @@ for (let i = 0; i < frutas.length; i++) { //true
     console.log(frutas[i]); // naranjas
 }
 //false
-
