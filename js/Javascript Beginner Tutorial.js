@@ -26,8 +26,9 @@ console.log(nuevaEdad);
 const VERSION = '0.9';
 console.log(VERSION);
 
-//EXERCISE 6 - String Concatenation - NO FUNCIONO - CONSULTAR
-//Concatenar es algo que voy usar muy amenudo.
+//EXERCISE 6 - String Concatenation
+//Concatenar es algo que voy usar muy amenudo. 
+//No funcionaba, al parecer es porque estoy duplicando los codigos, eso genera conflicto.
 let myVar1 = "Hello";
 let myVar2 = "World";
 
