@@ -88,3 +88,33 @@ console.log(multy2(324234, 47))
 
 //EXERCISE 7 - Functions That Returns
 //Si tus funciones retornan algo, puedes crear algoritmos que utilicen varias funciones al mismo tiempo.
+let dollarToEuro = function(dollarValue) {
+    return dollarValue * 0.89;
+}
+let euroToYen = function(euroValue) {
+    return euroValue * 124.15;
+}
+//***** YOUR CODE BELOW ↓ ******
+//RESPUESTA LARGA (CHATGPT)
+let dollarAmount = 137;
+let euros = dollarToEuro(dollarAmount);
+let yens = euroToYen(euros);
+//se utiliza la función dollarToEuro para convertir el valor de 137 dólares a euros. 
+//Luego, se pasa ese valor de euros a la función euroToYen para obtener el valor equivalente en yenes.
+console.log(yens);
+
+//RESPUESTA CON CODIGO MÁS LIMPIO (CHATGPT)
+const dollarToEuro2 = dollarValue => dollarValue * 0.89;
+const euroToYen2 = euroValue => euroValue * 124.15;
+
+const yens2 = euroToYen2(dollarToEuro2(137));
+
+console.log(yens); // Salida: 17375.61
+
+
+//RESPUESTA IMPRIMIENDO EL VALOR EN yenes DIRECTAMENTE EN EL console.log 
+//SUGERIDO EN MENTORIA POR ALEXIS ANTES QUE CHAT GPT 
+console.log(euroToYen(dollarToEuro(137)))
+// convertir un valor en dollares a un valor en euro, retorna como una variable.
+//Se llama a la función dollarToEuro con el valor de 137 y el resultado se pasa directamente a la función euroToYen. 
+//El valor final en yenes se imprime directamente en console.log.
