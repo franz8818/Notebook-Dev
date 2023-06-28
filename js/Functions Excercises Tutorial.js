@@ -27,6 +27,7 @@ console.log(superduper);
 //Ojo con duplicar codigo con la función
 
 //EJEMPLO - una función que calcule el área de un cuadrado:
+//Declaro una función
 function calculateArea(length, edge) {
     return length * edge;
 }
@@ -35,3 +36,55 @@ let squareArea1 = calculateArea(4, 4);
 let squareArea2 = calculateArea(2, 2);
 let squareArea3 = calculateArea(5, 5);
 //Ahora me pide crear una nueva variable para cada nueva repetición(iteración) de la función 
+
+//EXERCISE 4 - Defining VS Calling a Function
+//Fórmula de código básica:
+//function de JS -> Define una función -> Nombre lo más descriptivo
+//Parametros: si la función está sumando dos enteros, esto significa que la función necesitará dos parámetros.
+//Alcance{} -> Scope -> Operaciones dentro de la función.
+function myFunctionName(parametro, parametro2, ...parametroX) {
+    //el código de la función va aquí
+    return algo; // No todas las funciones deben retornar algo, pero se recomienda que lo hagan. 
+}
+//EJEMPLO
+function concatenateNumberToString(localNumber, localString) {
+    let localVariable = localString + "" + localNumber;
+    return localVariable;
+}
+
+//Define the function called "multi" that expects 2 parameters:
+function multi(num1, num2) {
+    return num1 * num2;
+}
+
+//don't edit anything below this line
+var returnValue = multi(7, 53812212);
+console.log(returnValue);
+
+//EXERCISE 5 - Anonymous Functions
+//Las funciones anónimas deben almacenarse dentro de una variable para poder usarlas.
+let multy = function(a, b) {
+    return a * b;
+}
+//Dont edit anything ABOVE this line
+
+//your code here
+var result = multy(324234, 47);
+console.log(result);
+
+//EXERCISE 6 - Arrow Function
+//Corrigen el alcance que tienen las funciones tradicionales, que requieren unión(binding), para React.
+//Las funciones de flecha se comportan como las funciones en cualquier otro lenguaje, las functiones tradicionales no.
+const sum = (param1, param2) => {
+    return param1 * param2;
+}
+
+const multy2 = (a, b) => {
+    return a * b;
+}
+
+//Dont edit anything below this line
+console.log(multy2(324234, 47))
+
+//EXERCISE 7 - Functions That Returns
+//Si tus funciones retornan algo, puedes crear algoritmos que utilicen varias funciones al mismo tiempo.
