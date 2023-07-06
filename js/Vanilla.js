@@ -3,6 +3,8 @@
 //Trabaja atravez del DOM: Document Object Model -> lo que el usuario puede ver o no.
 
 //variables -> Lugares donde se almacena info en la memoria del navegador
+//Variable mutable -> la puedes modificar
+//Variable inmutable -> No la puedes modificar -> No le puede actualizar el valor.
 //let permite declarar una variable mutable
 let msj = "Hola Franz Seidel";
 //const nos permite declarar una variable inmutable
@@ -20,10 +22,35 @@ const inputTodo = document.getElementById("todo"); //En JS
 //2. Crear la primera utilidad -> Registrar lo que el usuario escriba. 
 //Cada vez que el usuario escriba en el INPUT y le de click en el BOTON
 //Necesito guardar en JS el valor de lo que el usuario esta escribiendo.
-//EVENTO -> Es la forma en que el usuario interactua con JS -> Todas las acciones que el usuario haga en la pagina.
+//EVENTO -> Es la forma en que el usuario interactua con JS -> Todas las acciones que el usuario haga en la página.
 //Se trabaja con el EVENTO -> CHANGE -> Evento de cambio -> Registra cuando un elemento cambia -> Se utiliza principalmente para INPUTS
 
+//variable inmutable nuevaTarea = "string vacio -> para que agrege el valor del usuario";
+let nuevaTarea = "";
+let listaTareas = []; //arreglo vacio -> "lista de cosas"
+
+//function nombreFuncion() { bloque de codigo }
+//Un parámetro es un valor dinámico -> Pasa cuando se ejecuta la función.
+function actualizaTarea(evento) {
+    //Permite asignarle a la nueva al STRING vacio un nuevo valor (lo que el usuario vaya escribiendo) 
+    nuevaTarea = evento.target.value
+    console.log(nuevaTarea);
+}
+
+//consola(parámetro.objetivo.valor de lo que el usuario escribe -> propiedad del TARGET)
+console.log(evento.target.value);
+
 //Evento del tipo "change"
+//Evento transmite información -> La idea es que imprima la info.
 //Empieza a escuchar por eventos -> Definir que tipo de evento queremos escuchar -> Evento del tipo CHANGE
 //Función que va ejecutar (addEventListener) -> Función: Bloque de codigo reutilizable.
-inputTodo.addEventListener("change", actualizaTarea());
+// elemento.addEventListener ("tipo de evento", (parámetro) arrowfunction function(parámetro))
+inputTodo.addEventListener("change", () => actualizaTarea());
+
+//Le paso la info del evento a mi función -> Utilizo el console.log de este evento ->function actulizaTarea(evento){}
+//Imprime el evento -> Nos fijamos en el TARGET -> Qué es el elemento que esta disparando el evento -> En esté caso es el INPUT
+//si colocamos en el console.log -> (evento.target); -> Este nos muestra el INPUT -> Que es el objetivo(target)
+//Pero queremos ver el valor, lo que la persona está escribiendo. Usamos -> (evento.target.value);
+function actualizaTarea(evento) {
+    console.log(evento.target.value);
+}
