@@ -25,7 +25,8 @@ const inputTodo = document.getElementById("todo"); //En JS
 //EVENTO -> Es la forma en que el usuario interactua con JS -> Todas las acciones que el usuario haga en la página.
 //Se trabaja con el EVENTO -> CHANGE -> Evento de cambio -> Registra cuando un elemento cambia -> Se utiliza principalmente para INPUTS
 
-//variable inmutable nuevaTarea = "string vacio -> para que agrege el valor del usuario";
+//Variable inmutable -> nuevaTarea = "string vacio -> para que agrege el valor del usuario";
+//Quiero que cuando el usuario le de cliclk al boton "agregar" ó le de enter -> Esa tarea se agrege a mi a mi total de tareas "listaTareas"
 let nuevaTarea = "";
 let listaTareas = []; //arreglo vacio -> "lista de cosas"
 
@@ -53,4 +54,12 @@ inputTodo.addEventListener("change", () => actualizaTarea());
 //Pero queremos ver el valor, lo que la persona está escribiendo. Usamos -> (evento.target.value);
 function actualizaTarea(evento) {
     console.log(evento.target.value);
+}
+
+//Se crea función para ver si esta funcionado.
+function agregarTareaLista() {
+    console.log(listaTareas); //Verifico si muestra en la consola el array[] vacio. 
+    //Aunque registra el evento aun no le he dado la función a ese vento, aun no hace nada con los parametros. 
+
+    console.log("Hola Franz"); //Creo un msj para asegurar que los "eventos" se esten registrando.
 }
