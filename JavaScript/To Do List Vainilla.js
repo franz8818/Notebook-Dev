@@ -1,15 +1,25 @@
-//TODO LIST CON VANILLA JS
+//DOCUMENTACIÓN
+//TO-DO-LIST CON VANILLA JS
 
-//Trabaja atravez del DOM: Document Object Model -> lo que el usuario puede ver o no.
+//PREPARO LOS ARCHIVOS HTML & CSS
+// 1. Hacer una planificación de como vamos a trabajar y desarrolar el "proyecto"
+// 2. Crear archivos -> index.html, styles.css
+// 3. Crear estructura del HTML con un -> !
+// 4. Para visualizar el HTML (en este caso) utilizar -> "live Server" -> click derecho en el archivo HTML.
+// 5. Dar estructura al HTML -> <main> + <div> + <header> + etc...
+// 6. Linkear CSS con HTML con el código <link rel="stylesheet" href="styles.css"> y probarlo en archivo styles.css
+// 7. Le doy estilo a mi HTML con los selectores de etiquetas{} y clases{}
+// 8. Aplicar el "display: flex"
 
-//variables -> Lugares donde se almacena info en la memoria del navegador
-//Variable mutable -> la puedes modificar
-//Variable inmutable -> No la puedes modificar -> No le puede actualizar el valor.
-//let permite declarar una variable mutable
-let msj = "Hola Franz Seidel";
-//const nos permite declarar una variable inmutable
-const msj2 = "Hola Franz"
-console.log("msj,msj2");
+
+//1. Crear archivo -> app.js
+//2. Conectar un archivo JS con el archivo HTML -> Al final del body en HTML -> Agregar un "script" -> Vinculación con JS 
+// <script src="app.js"></script> -> Cedemos el control de nuestra web-app a JS.
+
+//3. Crear un "console.log" -> Herramienta para probar codigo en la terminal y así verificar que se conecto con mi HTML.
+console.log("Hola Mundo");
+
+
 
 //Para hacer mi todo list dinamico debo seguir los siguientes pasos:
 
@@ -63,3 +73,7 @@ function agregarTareaLista() {
 
     console.log("Hola Franz"); //Creo un msj para asegurar que los "eventos" se esten registrando.
 }
+
+//elemento.addEventListener ("evento -> usuario hace click con el mouse", (parámetro) arrowfunction function(parámetro))
+//Se debe agregar el evento -> "click" y la función -> "agregarTareaLista()"
+botonAgregar.addEventListener("click", agregarTareaLista);
