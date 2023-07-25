@@ -1,5 +1,5 @@
 //Conditional (ternary) operator
-//DOCUMENTATIO -> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
+//DOCUMENTATION -> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
 
 //EJEMPLO
 function getFee(isMember) {

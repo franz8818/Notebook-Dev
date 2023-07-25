@@ -11,12 +11,20 @@
 <componentes> son una pequeña parte de tu diseño, pero algunas están ocultas al principio. 
     Tendrás que mostrarlos y esconderlos según el comportamiento del usuario.</componentes>
 
-//React.JSX, -> "lenguaje" especial (una extensión de JS) 
+//React.JSX, -> "lenguaje" especial (una extensión de JS) -> HTML+JS
 //Permite escribir HTML puro dentro de tu código React/Javascript sin tener que usar comillas (convirtiéndolo en string). 
 //Básicamente elimina la necesidad de concatenar string HTML. 
 
+//EJEMPLO 1
 return <h1 id="name"> {person.name} </h1>;  //Envolver el código entre llaves, codigo dinámico JS en HTML.
 
+//EJEMPLO 2
+//creamos un componente que retorna un html -> Se identifica por medio de la mayuscula "Alert"
+//Etiqueta personalizada ->  <Alert/>  es un componente JSX
+const Alert = function( ){
+  return (<div className="any-class-name">Hola mundo</div>);
+  }
+  ReactDOM.render(<Alert/>) // «Alert/> es nuestro componente JSX creado
 
 //Siempre debe evaluarse como una expresión
 //No podemos usar declaraciones JS dentro de las llaves, como la declaración if..else por ejemplo.
@@ -27,10 +35,31 @@ return <h1 id="name"> {person.name} </h1>;  //Envolver el código entre llaves, 
 return <h1 id="name"> {person.name == "John" ? "John" : "Tom" } </h1>; 
 //funciona en JSX y evualará a <h1 id="name"> John </h1> o a <h1 id="name"> Tom </h1> dependiendo del valor de person.name 
 
-//COMPONENTES
+//COMPONENTES -> React se basa en componentes -> nabvar, card, footer 
+//Juntamos esas piezas(componentes) como las de "lego" -> forma interfaz consistente.
 //Como los componentes de BOOTSRAP pero más complejos
 //Estos componentes se pueden basar en el uso de las estructuras JS familiares de función o clase.
+//Existen componentes padres e hijos 
 
+//EJEMPLO 1
+//Trabajamos dos componentes -> Welcome("hijo") & App("padre") -> nombres en mayúscula 
+//"retorna" un codigo HTML
+//Etiqueta de contine varias etiquetas es la "padre"
+
+function Welcome (props) {
+  return <h1>Hello, (props.name) </h1>;
+}
+  function App() {
+  return (
+    <div>
+  <Welcome name="Sara" />
+  <Welcome name="Cahal" />
+  <Welcome name="Edite" />
+  </div>
+  );
+}
+
+//EJEMPLO 2
 import React from 'react';
 
 //Renombramos el componente a MyCard 
