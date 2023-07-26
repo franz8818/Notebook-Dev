@@ -19,7 +19,7 @@
 return <h1 id="name"> {person.name} </h1>;  //Envolver el código entre llaves, codigo dinámico JS en HTML.
 
 //EJEMPLO 2
-//creamos un componente que retorna un html -> Se identifica por medio de la mayuscula "Alert"
+//creamos un componente que siempre debe retornar un html(un mismo bloque) -> Se identifica por medio de la mayuscula "Alert"
 //Etiqueta personalizada ->  <Alert/>  es un componente JSX
 const Alert = function( ){
   return (<div className="any-class-name">Hola mundo</div>);
@@ -42,9 +42,11 @@ return <h1 id="name"> {person.name == "John" ? "John" : "Tom" } </h1>;
 //Existen componentes padres e hijos 
 
 //EJEMPLO 1
-//Trabajamos dos componentes -> Welcome("hijo") & App("padre") -> nombres en mayúscula 
+//Trabajamos dos componentes -> Welcome("hijo") & App("padre") -> nombres de funciones en mayúscula (PascalCase)
 //"retorna" un codigo HTML
 //Etiqueta de contine varias etiquetas es la "padre"
+//Con jsx los atributos "class" -> se deben escribir como -> className
+//Si quiero cambiar varios "class" -> usar COMMAND + F -> buscar "class=" -> remplazar por "className"
 
 function Welcome (props) {
   return <h1>Hello, (props.name) </h1>;
@@ -64,6 +66,7 @@ import React from 'react';
 
 //Renombramos el componente a MyCard 
 //EJEMPLO -> Cada componente en React debe tener un método de renderizado que devuelva un bloque de código HTML.
+//"return" solo puede tener único bloque de codigo -> Si necesitamos dos bloques(DIV) o más, utilizamos la etiqueta React Fragment "<></>"" 
 function MyCard(){
     return (
         <div className="card" style={{width: "18rem"}}> //Observa que algunos atributos html cambian sus nombres o valores para funcionar en React

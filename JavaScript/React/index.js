@@ -14,5 +14,6 @@ import "../styles/index.css";
 import Home from "./component/home.jsx";
 
 //render your react application
+//                        ¿QUE VA DIBUJAR?        ¿DONDE LO VA DIBUJAR?
 //objeto.metodo-dibujar(<componente padre/>, lo dibuja en un div con ("#ID"));
 ReactDOM.render( < Home / > , document.querySelector("#app"));
