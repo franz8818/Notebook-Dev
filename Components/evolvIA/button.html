@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prueba Botón SVG</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* helpers opcionales para ver cajas */
+    .dbg { outline: 1px dashed rgba(148, 163, 184, .6); }
+  </style>
+</head>
+<body class="min-h-screen bg-white text-slate-900 antialiased">
+
+  <main class="mx-auto max-w-[1200px] p-8 space-y-10">
+    <h1 class="text-2xl font-bold">Prueba: botón con SVG + HTML</h1>
+
+    <!-- CONTENEDOR LIBRE (sin tope de ancho) -->
+    <div class="dbg p-4">
+      <!--
+        BOTÓN: el propio <a> es el lienzo del SVG
+        - Cambia w-[...] para ANCHO
+        - Cambia aspect-[ancho/alto] para ALTO proporcional
+        - Cambia bg-[length:...] para ZOOM del SVG (sin distorsionar)
+      -->
+      <a
+      class="grid place-items-center w-[640px] max-w-[92vw] aspect-[360/104] bg-no-repeat bg-contain bg-center"
+      style="background-image: url('./Hero.svg'); background-size: 100% auto;"
+    >
+      <span class="font-semibold text-white text-[clamp(14px,2.6vw,18px)]">
+        Inicia tu camino estratégico
+      </span>
+    </a>
+        <span class="font-semibold leading-none text-white text-[clamp(14px,2.6vw,18px)]">
+          Inicia tu camino estratégico
+        </span>
+      </a>
+    </div>
+
+    <!-- VARIANTES DE TAMAÑO (edita estas 3 líneas y recarga) -->
+    <div class="space-y-4">
+      <p class="text-sm text-slate-600">Prueba estos cambios uno por uno:</p>
+      <pre class="bg-slate-50 p-4 text-xs overflow-auto rounded">
+1) Más ancho (se hace más grande todo el botón):
+   class="... w-[640px] max-w-[92vw] ..."
+
+2) Más alto (si tu viewBox es p.ej. 360×104):
+   class="... aspect-[360/104] ..."
+
+3) Acercar el gráfico sin cambiar el cuadro:
+   style="...; background-size: 120% auto;"   ← zoom 20%
+
+4) Llenar el cuadro aunque recorte un poco:
+   Sustituye 'bg-contain' por 'bg-cover' en la clase.
+      </pre>
+    </div>
+  </main>
+
+</body>
+</html>
