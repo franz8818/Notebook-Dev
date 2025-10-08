@@ -1,0 +1,22 @@
+.contenedor,
+.contenedor-padre,
+.contenedor-scroll,
+.contenedor-zindex   {
+  border: 2px solid black;
+  margin: 20px 0;
+  padding: 10px;
+}
+
+.caja,
+.hijo-absolute,
+.boton-fixed,
+.elemento-sticky,
+.capa {
+    border: 1px solid red;
+    padding: 10px;
+}
+
+.caja-relative{
+    position: relative;
+   
+}

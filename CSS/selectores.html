@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selectores CSS</title>
+  <link rel="stylesheet" href="selectores.css">
+
+  <style>
+    h1 {
+        color: red;
+    }
+    div {
+        color: green;
+    }
+  </style>
+
+</head>
+
+<body>
+  <h1>Selectores CSS</h1>
+
+  <!-- ELEMENTO -->
+  <p style="color:navy"> Selector de elemento (p)</p>
+  <div>Selector de elemento (div)</div>
+
+  <!-- CLASE -->
+  <p class="rojo">Selector de clase (.rojo)</p>
+  <p class="grande">Selector de clase (.grande)</p>
+  <p class="rojo grande">Dos clases</p>
+
+  <!-- ID -->
+  <p id="unico">Selector de ID (#unico)</p>
+
+  <!-- DESCENDIENTE -->
+  <div class="contenedor">
+    <p>Hijo directo</p>
+    <div>
+      <p>Descendiente anidado</p>
+    </div>
+  </div>
+
+  <!-- PSEUDO-CLASES -->
+  <a href="specificidadHerencia.html">
+  <button>Pseudo-clases & Elementos</button>
+  <a class="rojo" href="#">Link</a>
+
+  <a href="boxModel.html">
+  <button>BOX Model</button>
+</a>
+
+</body>
+
+</html>

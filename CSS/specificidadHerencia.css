@@ -1,0 +1,30 @@
+input:focus{
+    outline: 2px solid #3498db;
+    background-color: #e8f4f8;
+}
+
+li:first-child{
+    font-weight: bold;
+    color: green;
+}
+
+li:last-child{
+    font-weight: bold;
+    color: red;
+}
+
+tr:nth-child(even){
+    background-color: gray;
+}
+
+.quote::after{
+    content: "´" ;
+    color: blue;
+    font-size: 24px;
+}
+
+.quote::before{
+    content: "´";
+    color: blue;
+    font-size: 24px;
+}
